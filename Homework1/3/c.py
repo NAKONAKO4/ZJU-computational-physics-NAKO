@@ -1,13 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 解析解
 def exact_solution(t):
     x_exact = 1.1 * np.cos(t)
     v_exact = -1.1 * np.sin(t)
     return x_exact, v_exact
 
-# 欧拉方法
 def euler_oscillator(delta_t, t_end):
     t = np.arange(0, t_end + delta_t, delta_t)
     x = np.zeros(len(t))
@@ -18,7 +16,6 @@ def euler_oscillator(delta_t, t_end):
         x[i] = x[i-1] + delta_t * v[i-1]
     return t, x, v
 
-# 欧拉-克罗默方法
 def euler_cromer_oscillator(delta_t, t_end):
     t = np.arange(0, t_end + delta_t, delta_t)
     x = np.zeros(len(t))
@@ -29,7 +26,6 @@ def euler_cromer_oscillator(delta_t, t_end):
         x[i] = x[i-1] + delta_t * v[i]
     return t, x, v
 
-# 欧拉-理查森方法
 def euler_richardson_oscillator(delta_t, t_end):
     t = np.arange(0, t_end + delta_t, delta_t)
     x = np.zeros(len(t))
@@ -42,7 +38,6 @@ def euler_richardson_oscillator(delta_t, t_end):
         x[i] = x[i-1] + delta_t * v_mid
     return t, x, v
 
-# 比较不同算法的误差
 def compute_oscillator_error(method, delta_t, t_end):
     t, x, v = method(delta_t, t_end)
     x_exact, v_exact = exact_solution(t)
@@ -50,12 +45,10 @@ def compute_oscillator_error(method, delta_t, t_end):
     error_v = np.max(np.abs(v - v_exact))
     return error_x, error_v
 
-# 模拟参数
 t_end = 4*np.pi
 delta_ts = [0.1, 0.05, 0.025, 0.01, 0.005]
 errors = []
 
-# 计算误差
 for delta_t in delta_ts:
     errors.append([
         delta_t,
@@ -64,7 +57,6 @@ for delta_t in delta_ts:
         *compute_oscillator_error(euler_richardson_oscillator, delta_t, 2*t_end)
     ])
 
-# 将误差表格显示出来
 import pandas as pd
 columns = ["Δt",
            "Euler (x error)", "Euler (v error)",
@@ -74,7 +66,7 @@ error_df = pd.DataFrame(errors, columns=columns)
 error_df.to_csv("harmonic_oscillator_error_table.csv", index=False)
 
 # 绘制数值解与解析解的比较
-delta_t = 0.01  # 选择较小步长
+delta_t = 0.1  # 选择较小步长
 t_exact = np.linspace(0, t_end, 1000)
 x_exact, v_exact = exact_solution(t_exact)
 
@@ -84,7 +76,6 @@ t_richardson, x_richardson, v_richardson = euler_richardson_oscillator(delta_t, 
 
 plt.figure(figsize=(12, 8))
 
-# 位置图
 plt.subplot(2, 1, 1)
 plt.plot(t_exact, x_exact, label="Exact Solution", color="black")
 plt.plot(t_euler, x_euler, 'o-', label="Euler", markersize=4)
@@ -95,7 +86,6 @@ plt.ylabel("Position (x)")
 plt.legend()
 plt.title("Position vs Time for Harmonic Oscillator")
 
-# 速度图
 plt.subplot(2, 1, 2)
 plt.plot(t_exact, v_exact, label="Exact Solution", color="black")
 plt.plot(t_euler, v_euler, 'o-', label="Euler", markersize=4)
