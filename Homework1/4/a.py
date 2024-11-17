@@ -1,20 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 参数定义
-g = 9.8  # 重力加速度 (m/s^2)
-v0 = 25  # 初始速度 (m/s)
-angles = np.radians([15, 30, 45, 60, 75])  # 不同的发射角 (度转弧度)
+g = 9.8
+v0 = 25
+angles = np.radians([15, 30, 45, 60, 75])
 
-# 抛射轨迹计算函数
 def trajectory(v0, theta, g):
-    t_flight = 2 * v0 * np.sin(theta) / g  # 飞行时间
-    t = np.linspace(0, t_flight, num=500)  # 时间点
-    x = v0 * np.cos(theta) * t  # 水平位移
-    y = v0 * np.sin(theta) * t - 0.5 * g * t**2  # 垂直位移
+    t_flight = 2 * v0 * np.sin(theta) / g
+    t = np.linspace(0, t_flight, num=500)
+    x = v0 * np.cos(theta) * t
+    y = v0 * np.sin(theta) * t - 0.5 * g * t**2
     return x, y
 
-# 绘制轨迹
 plt.figure(figsize=(10, 6))
 for theta in angles:
     x, y = trajectory(v0, theta, g)
@@ -27,29 +24,25 @@ plt.legend()
 plt.grid()
 plt.show()
 
-# 从不同高度抛出
 def range_from_height(v0, theta, h, g):
     a = -0.5 * g
     b = v0 * np.sin(theta)
     c = h
-    t_up = (-b + np.sqrt(b**2 - 4 * a * c)) / (2 * a)  # 解二次方程找时间
+    t_up = (-b + np.sqrt(b**2 - 4 * a * c)) / (2 * a)
     t_down = (-b - np.sqrt(b**2 - 4 * a * c)) / (2 * a)
     t_flight = max(t_up, t_down)
     R = v0 * np.cos(theta) * t_flight
     return R
 
-# 测试角度
 angles = np.radians(np.linspace(30, 60, 100))
 ranges = [range_from_height(v0, theta, 2.1, g) for theta in angles]
 
-# 找到最大射程对应的角度
 max_range_idx = np.argmax(ranges)
 optimal_angle = np.degrees(angles[max_range_idx])
 max_range = ranges[max_range_idx]
 
 print(f"最大射程: {max_range:.2f} m, 最佳角度: {optimal_angle:.2f}°")
 
-# 绘制射程 vs 角度
 plt.figure(figsize=(10, 6))
 plt.plot(np.degrees(angles), ranges, label="Range vs Angle")
 plt.axvline(optimal_angle, color="r", linestyle="--", label=f"Optimal Angle: {optimal_angle:.2f}°")
@@ -61,7 +54,7 @@ plt.grid()
 plt.show()
 
 
-# 带空气阻力的抛射运动
+#Air resistence
 def trajectory_with_drag(v0, theta, h, g, C, m, dt=0.01):
     k2 = C / m
     t = [0]
@@ -83,13 +76,11 @@ def trajectory_with_drag(v0, theta, h, g, C, m, dt=0.01):
     return np.array(x), np.array(y)
 
 
-# 模拟轨迹
 theta = np.radians(45)
 C = 0.1
 m = 1.0
 x_drag, y_drag = trajectory_with_drag(v0, theta, 2.1, g, C, m)
 
-# 绘制比较
 x_no_drag, y_no_drag = trajectory(v0, theta, g)
 
 plt.figure(figsize=(10, 6))

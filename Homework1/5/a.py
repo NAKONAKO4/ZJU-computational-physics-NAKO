@@ -1,18 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 振子参数
-gamma = 0.4  # 阻尼系数
-omega0 = 3.0  # 自由振动频率
-omega = 2.0  # 外加驱动频率
-A0 = 3.1  # 驱动振幅
+gamma = 0.4
+omega0 = 3.0
+omega = 2.0
+A0 = 3.1
 
-# 初始条件
-x0, v0 = 1.0, 0.0  # 初始位置和速度
-t_end = 50  # 模拟时间
-dt = 0.01  # 时间步长
+x0, v0 = 1.0, 0.0
+t_end = 50
+dt = 0.01
 
-# 振动方程数值求解 (欧拉方法)
 def driven_oscillator(A0, omega, omega0, gamma, x0, v0, t_end, dt):
     t = np.arange(0, t_end, dt)
     x = np.zeros(len(t))
@@ -89,7 +86,6 @@ plt.legend()
 plt.grid()
 plt.show()
 
-# 相空间轨迹
 plt.figure(figsize=(12, 6))
 plt.plot(x, v, label="Phase Space Trajectory")
 plt.xlabel("Displacement x(t)")
@@ -99,7 +95,6 @@ plt.legend()
 plt.grid()
 plt.show()
 
-# 振幅和相位
 def amplitude_phase(A0, omega, omega0, gamma, t_end, dt):
     t, x, _ = driven_oscillator(A0, omega, omega0, gamma, x0, v0, t_end, dt)
     amplitude = np.max(x[int(len(t)/2):])  # 取稳态后的最大值

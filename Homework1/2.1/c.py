@@ -22,6 +22,7 @@ env_T = 17
 
 t_black_large_step = t_black[::2]
 T_black_large_step = T_black[::2]
+print(T_black_large_step)
 
 t_black_small_step = np.linspace(0, 46, 47)
 T_black_small_step = np.interp(t_black_small_step, t_black, T_black)
