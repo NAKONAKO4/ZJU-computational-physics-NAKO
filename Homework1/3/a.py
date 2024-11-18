@@ -45,11 +45,11 @@ def compute_error(method, delta_t):
     t, y, v = method(delta_t)
     y_exact = exact_y(t)
     v_exact = exact_v(t)
-    error_y = np.max(np.abs(y - y_exact))
-    error_v = np.max(np.abs(v - v_exact))
+    error_y = np.max(np.abs(y - y_exact))/np.mean(np.abs(y_exact))
+    error_v = np.max(np.abs(v - v_exact))/np.mean(np.abs(v_exact))
     return error_y, error_v
 
-delta_ts = [0.2, 0.1, 0.05, 0.01, 0.005]
+delta_ts = [0.2, 0.1, 0.05, 0.01, 0.005, 0.001, 0.0005, 0.0001]
 errors = []
 
 for delta_t in delta_ts:
@@ -81,20 +81,22 @@ v_exact = exact_v(t_exact)
 plt.figure(figsize=(16, 12))
 
 plt.subplot(2, 1, 1)
-plt.plot(t_exact, y_exact, label="Exact Solution", color="black")
+
 plt.plot(t_euler, y_euler, 'o-', label="Euler", markersize=4)
 plt.plot(t_cromer, y_cromer, 's-', label="Euler-Cromer", markersize=4)
 plt.plot(t_richardson, y_richardson, '^-', label="Euler-Richardson", markersize=4)
+plt.plot(t_exact, y_exact, label="Exact Solution", color="black")
 plt.xlabel("Time (s)")
 plt.ylabel("Position (y)")
 plt.legend()
 plt.title("Position vs Time")
 
 plt.subplot(2, 1, 2)
+
+plt.plot(t_euler, v_euler, 'o-', label="Euler", markersize=4)
+plt.plot(t_cromer, v_cromer,  's-', label="Euler-Cromer", markersize=4)
+plt.plot(t_richardson, v_richardson, '^-', label="Euler-Richardson", markersize=4)
 plt.plot(t_exact, v_exact, label="Exact Solution", color="black")
-plt.plot(t_euler, v_euler, label="Euler", markersize=4)
-plt.plot(t_cromer, v_cromer,  label="Euler-Cromer", markersize=4)
-plt.plot(t_richardson, v_richardson, label="Euler-Richardson", markersize=4)
 plt.xlabel("Time (s)")
 plt.ylabel("Velocity (v)")
 plt.legend()
