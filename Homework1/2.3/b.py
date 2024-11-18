@@ -35,7 +35,7 @@ plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.show()
 
-print("b题结果：")
+print("b：")
 for i, delta_t in enumerate(delta_ts):
     print(f"Δt = {delta_t:.3f}, Error = {errors[i]:.6f}")
 
@@ -45,15 +45,14 @@ def find_delta_t(T_s, T_0, r, t_target, tolerance):
         _, T_numeric = euler_method(T_s, T_0, r, delta_t, t_target)
         T_exact = analytical_solution(t_target, T_s, T_0, r)
         error = abs(T_numeric[-1] - T_exact)
-        if error <= tolerance:
+        if error/T_exact <= tolerance:
             return delta_t, error
         delta_t /= 2
 
-# 对 t=1.60 和 t=5.5 进行计算
 tolerance = 0.001
 delta_t_1_60, error_1_60 = find_delta_t(T_s, T_0, r, 1.60, tolerance)
 delta_t_5_5, error_5_5 = find_delta_t(T_s, T_0, r, 5.5, tolerance)
 
-print("c题结果：")
-print(f"t = 1.60 分钟时，Δt = {delta_t_1_60:.6f}, Error = {error_1_60*100:.6f}%")
-print(f"t = 5.50 分钟时，Δt = {delta_t_5_5:.6f}, Error = {error_5_5*100:.6f}%")
+print("c：")
+print(f"t = 1.60，Δt = {delta_t_1_60:.6f}, respective_error = {error_1_60*100:.6f}%")
+print(f"t = 5.50，Δt = {delta_t_5_5:.6f}, respective_error = {error_5_5*100:.6f}%")
