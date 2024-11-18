@@ -37,14 +37,14 @@ params_cream, _ = curve_fit(lambda t, r: newton_cooling_function(t, r, env_T, in
                             t_cream, T_cream)
 r_cream = params_cream[0]
 
-print("==========最小二乘法==========")
+print("==========Least Squares Methods==========")
 print(f"black coffee's r: {r_black} min^-1")
 print(f"cream coffee's r: {r_cream} min^-1")
 
 r_black_mean, r_black_std = calculate_r_seperatedly(t_black, T_black, env_T)
 r_cream_mean, r_cream_std = calculate_r_seperatedly(t_cream, T_cream, env_T)
 
-print("==========分段计算==========")
+print("==========Calculate partially==========")
 print("black coffee's r: mean = {:.4f} min^-1, std = {:.4f} min^-1".format(r_black_mean, r_black_std))
 print("cream coffee's r: mean = {:.4f} min^-1, std = {:.4f} min^-1".format(r_cream_mean, r_cream_std))
 
