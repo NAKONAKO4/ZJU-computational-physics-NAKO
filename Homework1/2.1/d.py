@@ -11,4 +11,4 @@ T_targets = [49, 33, 25]
 times = [time_to_temperature(r, T_env, T_initial_black, T_target) for T_target in T_targets]
 
 for T_target, time in zip(T_targets, times):
-    print(f"降温到 {T_target}°C 所需时间: {time:.2f} 分钟")
+    print(f"Cool down to {T_target}°C needed: {time:.2f} minutes")
