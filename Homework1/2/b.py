@@ -54,5 +54,5 @@ delta_t_1_60, error_1_60 = find_delta_t(T_s, T_0, r, 1.60, tolerance)
 delta_t_5_5, error_5_5 = find_delta_t(T_s, T_0, r, 5.5, tolerance)
 
 print("c：")
-print(f"t = 1.60，Δt = {delta_t_1_60:.6f}, respective_error = {error_1_60*100:.6f}%")
-print(f"t = 5.50，Δt = {delta_t_5_5:.6f}, respective_error = {error_5_5*100:.6f}%")
+print(f"t = 1.60，Δt = {delta_t_1_60:.6f}, respective_error = {error_1_60:.6f}%")
+print(f"t = 5.50，Δt = {delta_t_5_5:.6f}, respective_error = {error_5_5:.6f}%")

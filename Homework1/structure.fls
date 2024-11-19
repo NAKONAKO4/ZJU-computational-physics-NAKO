@@ -1,6 +1,0 @@
-PWD /Users/nako/workspace/Computational physics/Homework1
-INPUT /usr/local/texlive/2023/texmf.cnf
-INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/nako/workspace/Computational physics/Homework1/structure.tex
-OUTPUT structure.log

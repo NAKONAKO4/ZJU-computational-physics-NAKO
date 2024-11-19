@@ -33,14 +33,15 @@
 %----------------------------------------------------------------------------------------
 
 % Required
-\newcommand{\assignmentQuestionName}{Question} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
 \newcommand{\assignmentClass}{ZJU Computational Physics} % Course/class
 \newcommand{\assignmentTitle}{Homework\ \#1} % Assignment title or name
-\newcommand{\assignmentAuthorName}{GUAN Yifeng} % Student name
+\newcommand{\assignmentAuthorName}{管一沣} % Student name
 
 % Optional (comment lines to remove)
-%\newcommand{\assignmentClassInstructor}{Jones 10:30am} % Intructor name/time/description
-\newcommand{\assignmentDueDate}{Monday,\ October\ 18,\ 2024} % Due date
+%\newcommand{\assignmentClassInstructor}{} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Monday,\ October\ 18,\ 2024\\
+Github: https://github.com/NAKONAKO4/ZJU-computational-physics-NAKO} % Due date
 \usepackage{listings, xcolor}
 \lstdefinestyle{lfonts}{
   basicstyle   = \footnotesize\ttfamily,
@@ -104,16 +105,31 @@
 \answer{a. 计算方法采用两种：第一种是简单地对每一个$\Delta t$求r值，之后对所有r值求均值；第二种是将所有数据在牛顿冷却函数下做最小二乘法拟合。
 		由于时间间隔2min并不是一个足够小的值，所以第一种方法的误差会偏大，而采用最小二乘法拟合会更加精准。\par
 		通过代码计算（参见/1/a.py）可得，由第一种方法计算得到的黑咖啡r值为0.0232min$^{-1}$，奶咖啡为0.0214min$^{-1}$；由第二种方法得到的黑咖啡r值为0.0259min$^{-1}$，奶咖啡为0.0237min$^{-1}$。之后的计算都采用第二种方法得到的结果。}
-\lstinputlisting[style = python]{2.1/a.py}
+\lstinputlisting[style = python]{1/a.py}
+\answer{运行结果为}
+\begin{center}
+	\includegraphics[width=\columnwidth]{1/a1.png}
+\end{center}
 \answer{b. 参见/1/b.py，图像中可见仍然存在一定的与实际值的误差。
+		
+		运行结果为	
+
 		\begin{center}
 			\includegraphics[width=0.7\columnwidth]{b.png}
 		\end{center}}
-\lstinputlisting[style = python]{2.1/b.py}
+\lstinputlisting[style = python]{1/b.py}
 \answer{c. 设置两个新的步长4min和1min，其中4min步长通过直接取数据中的每个4min时间间隔即可，1min步长通过差值实现。}
-\lstinputlisting[style = python]{2.1/c.py}
+\lstinputlisting[style = python]{1/c.py}
+\answer{运行结果为}
+\begin{center}
+	\includegraphics[width=\columnwidth]{1/c1.png}
+\end{center}
 \answer{d. 降温到49度需要27.54min，降温到33度需要54.30分钟，降温到25度需要81.06分钟。这说明物体与周围环境温差越小降温越慢。}
-\lstinputlisting[style = python]{2.1/d.py}
+\lstinputlisting[style = python]{1/d.py}
+\answer{运行结果为}
+\begin{center}
+	\includegraphics[width=\columnwidth]{1/d1.png}
+\end{center}
 \answer{e. 牛顿冷却定律并不完全适合这个问题，还存在液体的蒸发所带走的热量，以及液体表面积和与环境接触材质的影响，需要考虑物体与环境的热传导系数、物体的传热方式来进行优化。}
 \end{question}
 
@@ -127,11 +143,11 @@
 
 \answer{a. 牛顿冷却定律：$\frac{dT}{dt}=-r\times (T-T_{env})$，
 		将T项移到左边后对时间从0到t积分得：$T(t)-T_{env}=e^{-rt}\times (T_0-T_{env})$，其中$T_0=T(\inf)=T_s$，可得$T(t)=T_s-(T_s-T_0)e^{-rt}$}
-\answer{b. 参见/2/b.py}	
-\lstinputlisting[style = python]{2.3/b.py}
+
+\lstinputlisting[style = python]{2/b.py}
 \answer{运行结果为：
 
-\includegraphics[width=\columnwidth]{2.3/output2.png}
+\includegraphics[width=\columnwidth]{2/b1.png}
 
 		整理如下}
 
@@ -159,7 +175,7 @@
 %--------------------------------------------
 
 \end{question}
-
+\iffalse
 \begin{question}
 	\questiontext{Comparison of algorithm.}
 	\answer{a. 设置多个$\Delta t$:0.2s, 0.1s, 0.05s, 0.01s, 0.005s, 0.001s, 0.0005s, 0.0001s，分别计算相对误差并画表得}
@@ -184,7 +200,7 @@
 		\label{tab:error_values}
 		\end{table}
 \end{question}
-
+\fi
 \begin{question}
 	\questiontext{Motion of a linear oscillator.}
 	\answer{a. 参见/5/a.py}
@@ -305,7 +321,7 @@
 %----------------------------------------------------------------------------------------
 %	QUESTION 3
 %----------------------------------------------------------------------------------------
-
+\iffalse
 \begin{question}
 
 \questiontext{Identify the author of Equation \ref{eq:bayes} below and briefly describe it in English.}
@@ -378,7 +394,7 @@
 %--------------------------------------------
 
 \end{question}
-
+\fi
 %----------------------------------------------------------------------------------------
 
 \end{document}
