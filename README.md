@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This repository serves as a centralized space for organizing and presenting my homework assignments for the **Computational Physics** course at Zhejiang University (ZJU). It is designed primarily as a personal resource to document the solutions, methodologies, and progress made throughout the course. The repository aims to serve as an educational tool, fostering both personal learning and the sharing of knowledge within the academic community.
+This repository serves as a centralized space for organizing and presenting the homework assignments for the **Computational Physics** course at Zhejiang University. The repository aims to serve as an educational tool, fostering both personal learning and the sharing of knowledge within the academic community.
 
 ## Copyright and Anti-Plagiarism Policy
 
