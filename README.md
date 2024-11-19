@@ -19,3 +19,9 @@ By uploading the homework after the due date, I also aim to protect the intellec
 Feel free to browse the repository, but please remember that it is intended solely for educational purposes. Reusing or copying the content directly without understanding it is discouraged. Instead, I encourage others to learn from the code and problem-solving techniques.
 
 Thank you for respecting this policy.
+## Course Progress
+
+Progress: ![Progress](https://progress-bar.dev/37/) **37% Completed**
+
+- **Weeks Completed**: 3/8
+- **Topics Remaining**: 5
