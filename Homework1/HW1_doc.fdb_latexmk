@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1731977924 "HW1_doc.xdv" "HW1_doc.pdf" "HW1_doc" 1731977925 0
-  "HW1_doc.xdv" 1731977924 456116 e02e7b21f5eccdd75605590fafb37e6d "xelatex"
+["xdvipdfmx"] 1731986839 "HW1_doc.xdv" "HW1_doc.pdf" "HW1_doc" 1731986840 0
+  "HW1_doc.xdv" 1731986838 455772 5dc4a7d13523e7ab62378646c5a75876 "xelatex"
   (generated)
   "HW1_doc.pdf"
   (rewritten before read)
-["xelatex"] 1731977922 "/Users/nako/workspace/Computational physics/Homework1/HW1_doc.tex" "HW1_doc.xdv" "HW1_doc" 1731977925 0
+["xelatex"] 1731986837 "/Users/nako/workspace/Computational physics/Homework1/HW1_doc.tex" "HW1_doc.xdv" "HW1_doc" 1731986840 0
   "/System/Library/Fonts/Menlo.ttc" 1725569657 2156036 ec05dfca6821d85440da0899493002c3 ""
-  "/Users/nako/workspace/Computational physics/Homework1/HW1_doc.tex" 1731977841 17425 75f54da0725e7a146266f62ffb096ee6 ""
+  "/Users/nako/workspace/Computational physics/Homework1/HW1_doc.tex" 1731986835 17424 4ad9eb60f6cfc9f024104cb150eeda26 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -201,8 +201,10 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1704088580 10502809 15934283ae47b11276bad57bc9e1ddc4 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
+  "1/2_b.png" 1731866771 51097 93803343e773c65855fec16cca7f98f0 ""
   "1/a.py" 1731914239 2078 9fbc13ed6fc03c61cd8f0ee1ff74ae59 ""
   "1/a1.png" 1731976117 58402 238f8e1c7836f8799761c1c12b22dcb4 ""
+  "1/b.png" 1731863721 66403 1619916686c2f594a42d8fe07054a8a4 ""
   "1/b.py" 1731913316 1959 2adb5de440d695c7c6b074abdd29f8cf ""
   "1/c.py" 1731913353 3249 a8abb4f01785d211b0ae1dfb2b8f9d74 ""
   "1/c1.png" 1731976166 75993 12e33c6ce69b54b4a035d97562b8906a ""
@@ -210,7 +212,6 @@
   "1/d1.png" 1731976202 30639 9be33766c1af6555a5c57f9fe95fe847 ""
   "2/b.py" 1731977430 1884 66ac5f920c1375d2248e5569ff7355a8 ""
   "2/b1.png" 1731977444 64736 b393875b8c0fca85ec090cbe9e887502 ""
-  "2_b.png" 1731866771 51097 93803343e773c65855fec16cca7f98f0 ""
   "5/a.py" 1731912650 1177 99210ee9af85ba17f39db5bd1444c28c ""
   "5/a1.png" 1731902697 97945 5ccc3745101e3e85ebb2ba341e301989 ""
   "5/b1.png" 1731903579 120701 3f6ec232bec205aa903e16a14a4b5f6f ""
@@ -229,9 +230,8 @@
   "5/f4.png" 1731912846 54707 c392c3bcf1c21084a6b7cacbc75b6cbf ""
   "5/f5.png" 1731912857 55268 7f8b0c56068e20368131149df4585566 ""
   "5/f6.png" 1731918818 29056 da743fba6b748eb0f040638e85f20cce ""
-  "HW1_doc.aux" 1731977924 1666 2311c29a91ebad4c9ecb3f2c566cfe9e "xelatex"
-  "HW1_doc.tex" 1731977841 17425 75f54da0725e7a146266f62ffb096ee6 ""
-  "b.png" 1731863709 66403 1619916686c2f594a42d8fe07054a8a4 ""
+  "HW1_doc.aux" 1731986838 1666 2311c29a91ebad4c9ecb3f2c566cfe9e "xelatex"
+  "HW1_doc.tex" 1731986835 17424 4ad9eb60f6cfc9f024104cb150eeda26 ""
   "structure.tex" 1731862619 7635 191911e252f744180c738120165a1451 ""
   (generated)
   "HW1_doc.aux"

@@ -1049,9 +1049,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT ./1/a1.png
 INPUT ./1/a1.png
 INPUT 1/a1.png
-INPUT ./b.png
-INPUT ./b.png
-INPUT b.png
+INPUT ./1/b.png
+INPUT ./1/b.png
+INPUT 1/b.png
 INPUT ./1/b.py
 INPUT 1/b.py
 INPUT ./1/b.py
@@ -1085,9 +1085,9 @@ INPUT 2/b.py
 INPUT ./2/b1.png
 INPUT ./2/b1.png
 INPUT 2/b1.png
-INPUT ./2_b.png
-INPUT ./2_b.png
-INPUT 2_b.png
+INPUT ./1/2_b.png
+INPUT ./1/2_b.png
+INPUT 1/2_b.png
 INPUT ./5/a.py
 INPUT 5/a.py
 INPUT ./5/a.py

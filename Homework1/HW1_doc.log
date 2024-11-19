@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.1)  19 NOV 2024 08:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.1)  19 NOV 2024 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1251,8 +1251,8 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
  [2])
 File: 1/a1.png Graphic file (type bmp)
 <1/a1.png>
-File: b.png Graphic file (type bmp)
-<b.png>
+File: 1/b.png Graphic file (type bmp)
+<1/b.png>
  [3] (./1/b.py [4]) (./1/c.py [5] [6])
 File: 1/c1.png Graphic file (type bmp)
 <1/c1.png>
@@ -1266,8 +1266,8 @@ File: 2/b1.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: 2_b.png Graphic file (type bmp)
-<2_b.png>
+File: 1/2_b.png Graphic file (type bmp)
+<1/2_b.png>
 [9] (./5/a.py [10])
 File: 5/a1.png Graphic file (type bmp)
 <5/a1.png>
@@ -1336,12 +1336,12 @@ File: 5/f6.png Graphic file (type bmp)
 enddocument/afterlastpage: lastpage setting LastPage.
 (./HW1_doc.aux) ) 
 Here is how much of TeX's memory you used:
- 29253 strings out of 476683
- 695172 string characters out of 5804048
+ 29247 strings out of 476683
+ 695069 string characters out of 5804048
  2081018 words of memory out of 5000000
- 48870 multiletter control sequences out of 15000+600000
- 525025 words of font info for 139 fonts, out of 8000000 for 9000
+ 48866 multiletter control sequences out of 15000+600000
+ 525009 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 95i,14n,117p,580b,2278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 95i,14n,117p,580b,2271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW1_doc.xdv (24 pages, 456116 bytes).
+Output written on HW1_doc.xdv (24 pages, 455772 bytes).
