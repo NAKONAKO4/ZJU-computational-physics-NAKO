@@ -1,0 +1,199 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{ctex}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{ZJU Computational Physics} % Course/class
+\newcommand{\assignmentTitle}{Homework\ \#2} % Assignment title or name
+\newcommand{\assignmentAuthorName}{NAKO} % Student name
+
+% Optional (comment lines to remove)
+%\newcommand{\assignmentClassInstructor}{} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Monday,\ December\ 2,\ 2024\\
+Github: https://github.com/NAKONAKO4/ZJU-computational-physics-NAKO} % Due date
+\usepackage{listings, xcolor}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\lstdefinestyle{python}{
+  language = {Python},
+  style    = lgeneral,
+}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title page
+
+\thispagestyle{empty} % Suppress headers and footers on the title page
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Derivatives}
+\answer{将forward formula, central difference formula, Richardson extrapolation结果绘制在图中进行对比。}
+\lstinputlisting[style = python]{1/a.py}
+\answer{运行结果为}
+\begin{center}
+	\includegraphics[width=\columnwidth]{1/a1.png}
+\end{center}
+\answer{b. 参见/1/b.py，图像中可见仍然存在一定的与实际值的误差。
+		
+		运行结果为
+		}
+\begin{center}
+	\includegraphics[width=\columnwidth]{1/b1.png}
+\end{center}
+\lstinputlisting[style = python]{1/b.py}
+\end{question}
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 2
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Integration}
+\lstinputlisting[style = python]{2/a.py}
+\answer{运行结果为：
+
+\includegraphics[width=\columnwidth]{2/a1.png}
+
+		整理如下}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l l l}
+		\toprule
+		&Trapezoid n& Simpson n\\
+		\midrule
+		$I_1 (log(x))$&8165&65\\
+		$I_2 (exp(-x^2))$&115471&383\\
+		$I_3 (1/(1+x^2))$&1632994&1438\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+%--------------------------------------------
+%--------------------------------------------
+
+\end{question}
+%--------------------------------------------
+% question 3
+%--------------------------------------------
+\begin{question}
+\questiontext{Hilbert Matrix}
+\answer{通过python numpy库的linalg.eigvals()函数可以直接将矩阵对角化并计算出矩阵的特征值。本题目使用了numpy库的linalg.eigvals()函数来对角化矩阵并计算特征值。}
+\lstinputlisting[style = python]{3/a.py}
+\begin{center}
+	\includegraphics[width=\columnwidth]{3/a1.png}
+\end{center}
+\end{question}
+
+%--------------------------------------------
+% question 4
+%--------------------------------------------
+\begin{question}
+\questiontext{Coupled Oscillators}
+\answer{a. 设置耦合系数为1，每个振子的质量为1，在T=10的模拟时长进行计算。首先通过欧拉方法来求解数值解，并与通过模态展开得到的解析解结果的$u_j(t)$进行对比。可以得到结果为}
+\begin{center}
+	\includegraphics[width=\columnwidth]{4/a1_1.png}
+\end{center}
+\answer{可以看到，欧拉方法得到的差值结果较大，相对误差较大。\par
+		于是我又尝试了用Runge-Kutta 4th方法去进行上述计算，得到结果如下}
+		\begin{center}
+			\includegraphics[width=\columnwidth]{4/a2_1.png}
+		\end{center}
+\answer{可以看到Runge-Kutta 4th方法得到的精度明显高于欧拉方法。}
+\answer{欧拉方法}
+\lstinputlisting[style = python]{4/a1.py}
+\answer{Runge-Kutta 4th方法}
+\lstinputlisting[style = python]{4/a1_1.py}
+\answer{b. 采用欧拉方法计算，得到结果如下}
+\begin{center}
+	\includegraphics[width=\columnwidth]{4/b2.png}
+\end{center}
+\answer{但事实上与解析解能量进行对比可以看到，欧拉方法与解析解能量并不吻合。}
+\begin{center}
+	\includegraphics[width=\columnwidth]{4/b1.png}
+\end{center}
+\answer{同时也可以看到，在更长的时间上进行计算，解析解的能量守恒并不是很好，在初始能量0.5下面波动，但是均值还是在0.475附近，存在一些比较大的波动到达0.375附近。}
+\begin{center}
+	\includegraphics[width=\columnwidth]{4/c2.png}
+\end{center}
+\lstinputlisting[style = python]{4/b.py}
+
+\answer{c. 结果如下，可以看到跟解析解十分吻合，同样也是没有很好的能量守恒，存在一些较大的波动，整体均值在接近初始能量0.5附近。}
+\begin{center}
+	\includegraphics[width=\columnwidth]{4/c1.png}
+\end{center}
+\lstinputlisting[style = python]{4/a6rk4.py}
+\end{question}
+\end{document}
