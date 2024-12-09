@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{ctex}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{ZJU Computational Physics} % Course/class
+\newcommand{\assignmentTitle}{Homework\ \#3} % Assignment title or name
+\newcommand{\assignmentAuthorName}{NAKO} % Student name
+
+% Optional (comment lines to remove)
+%\newcommand{\assignmentClassInstructor}{} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Monday,\ December\ 9,\ 2024\\
+Github: https://github.com/NAKONAKO4/ZJU-computational-physics-NAKO} % Due date
+\usepackage{listings, xcolor}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\lstdefinestyle{python}{
+  language = {Python},
+  style    = lgeneral,
+}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title page
+
+\thispagestyle{empty} % Suppress headers and footers on the title page
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Root-finding}
+\answer{a. a=1.09和a=0.21分别绘图可得：
+		\begin{center}
+			\includegraphics[width=\columnwidth]{1_1.png}
+		\end{center}
+		\begin{center}
+			\includegraphics[width=\columnwidth]{1_2.png}
+		\end{center}
+
+		可得在a=1.09时只有一根，大约为0.7；在a=0.21时有3根，大约为-3.7、-2.0、1.3。
+}
+\answer{b-f. 运行结果为
+		\begin{center}
+			\includegraphics[width=\columnwidth]{1_3.png}
+		\end{center}
+		}
+\lstinputlisting[style = python]{1.py}
+\end{question}
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 2
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Bifurcation Diagram}
+\lstinputlisting[style = python]{2.py}
+\answer{运行结果为：
+
+\includegraphics[width=\columnwidth]{2.png}}
+%--------------------------------------------
+%--------------------------------------------
+
+\end{question}
+\end{document}
