@@ -5,11 +5,11 @@ X = []
 Y = []
 for u in P:
 
-    m = np.random.random()
+    m = 0.5
     for n in range(2000):
         m=(u*m)*(1-m)*4
 
-    for n in range(300):
+    for n in range(100):
         m=(u*m)*(1-m)*4
         Y.append(m)
         X.append(u)
