@@ -23,4 +23,4 @@ Thank you for respecting this policy.
 
 - [x] Homework#1: Basic mechanics problems.
 - [x] Homework#2: Derivates and Oscillators.
-
+- [x] Homework#3
