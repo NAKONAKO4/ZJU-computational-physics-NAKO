@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{ctex}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{ZJU Computational Physics} % Course/class
+\newcommand{\assignmentTitle}{Homework\ \#4} % Assignment title or name
+\newcommand{\assignmentAuthorName}{NAKO} % Student name
+
+% Optional (comment lines to remove)
+%\newcommand{\assignmentClassInstructor}{} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Monday,\ December\ 13,\ 2024\\
+Github: https://github.com/NAKONAKO4/ZJU-computational-physics-NAKO} % Due date
+\usepackage{listings, xcolor}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\lstdefinestyle{python}{
+  language = {Python},
+  style    = lgeneral,
+}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title page
+
+\thispagestyle{empty} % Suppress headers and footers on the title page
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Random Number Generator}
+\answer{选取前十组数据进行随机数生成，采用线性同余生成器，数学公式表示为$X_{n+1} = (a \cdot X_n + c) \mod m$，生成2500个随机数。
+测试方法采用四种，分别为：分布均匀性测试、自相关性测试、Kolmogorov-Smirnov 测试、频谱分析（FFT后观察各个频率分布是否均匀）
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1_1.png}
+  \caption{在10组参数下生成的随机数分布的均匀性}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1_2.png}
+  \caption{在10组参数下生成的随机数分布的自相关性}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1_4.png}
+  \caption{在10组参数下生成的随机数分布的Kolmogorov-Smirnov 测试}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1_3.png}
+  \caption{在10组参数下生成的随机数分布的频谱分析}
+\end{figure}
+\answer{可以看到，分布均匀性较好，自相关性基本为0，Kolmogorov-Smirnov 测试的stat 较小且 p-value 较大，说明随机数序列接近均匀分布，频谱分析可以看到十组数据在各个频率上分布接近均匀。
+        事实上2500个随机数相对并不多，但由于在较多随机数生成时存在绘图问题，只进行了生成10000个随机数时的分布均匀性测试，得到结果为：
+        \begin{center}
+          \includegraphics[width=0.7\columnwidth]{1_1_2.png}
+        \end{center}
+        可以看到随着生成随机数越多，随机数生成器的均匀性能体现的越好，这说明随机数生成器的性能是好的，能够生成较随机的伪随机数。
+}
+\lstinputlisting[style = python]{1.py}
+\end{question}
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 2
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{Random walks in two dimensions}
+\answer{代码运行结果为：
+\begin{center}
+  \includegraphics[width=\columnwidth]{2_1.png}
+\end{center}
+
+值得注意的是，在实验过程中我发现由于浮点误差，代码中的"is\_self\_avoiding()"函数会因为设置的随机行走方向存在浮点数，而导致判断错误得到有634步self-avoiding random walks，但这是错误的，
+所以我修改随机行走方向全部为整数用来输入到"is\_non\_reversal()"和"is\_self\_avoiding()"函数中用来判断随机行走类型，然后在输入到"calculate\_statistics()"函数中进行x和y相关的计算时，对y数据乘以$\sqrt{3}$来将随机行走方向回到真实数值。
+}
+
+\lstinputlisting[style = python]{2.py}
+
+%--------------------------------------------
+%--------------------------------------------
+
+\end{question}
+%----------------------------------------------------------------------------------------
+%	QUESTION 3
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+  \questiontext{Numerical solution of the potential within a rectangular region.}
+  \answer{a. 对$n_x=n_y=9, n_x=n_y=45, n_x=n_y=72$进行分析，结果如下，其中$n_x=n_y=45$是为了与c题进行对比。
+  \begin{center}
+  \includegraphics[width=\columnwidth]{3_1.png}
+  \end{center}}
+  \lstinputlisting[style = python]{3_a.py}
+  \answer{b. 结果如下，可以看到进行边界值平均作为初始猜测值的方法是更好的，需要的迭代次数远少于随机猜测初始值的方法。
+          对两种方法得到的结果进行差值分析，可以看到两种方法的结果相差很小。
+          \begin{center}
+            \includegraphics[width=\columnwidth]{3_2_2.png}
+          \end{center}
+  } 
+  \lstinputlisting[style = python]{3_b.py}
+  \answer{c. 结果如下，可以看到比a中的$n_x=n_y=45$情况运算更快，迭代次数更少。
+  \begin{center}
+    \includegraphics[width=\columnwidth]{3_3.png}
+  \end{center}
+  }
+  \lstinputlisting[style = python]{3_c.py}
+
+
+\end{question}
+\end{document}
