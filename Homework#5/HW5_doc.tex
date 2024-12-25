@@ -1,0 +1,260 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{ctex}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{ZJU Computational Physics} % Course/class
+\newcommand{\assignmentTitle}{Homework\ \#5} % Assignment title or name
+\newcommand{\assignmentAuthorName}{NAKO} % Student name
+
+% Optional (comment lines to remove)
+%\newcommand{\assignmentClassInstructor}{} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Monday,\ December\ 23,\ 2024\\
+Github: https://github.com/NAKONAKO4/ZJU-computational-physics-NAKO} % Due date
+\usepackage{listings, xcolor}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\lstdefinestyle{python}{
+  language = {Python},
+  style    = lgeneral,
+}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title page
+
+\thispagestyle{empty} % Suppress headers and footers on the title page
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+
+\questiontext{MD: Approach to Equilibrium}
+\answer{a. 可以看到能量和动量都是守恒的，且动量基本为0（$10^{-14}$数量级）；同时计算得到的压强与理想气体压强差值相对误差较小。）
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/a1.png}
+  \caption{能量和动量随时间变化}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/a2.png}
+  \caption{温度和压强随时间变化}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/a3.png}
+  \caption{压强计算值与理想气体公式计算得到压强差值}
+\end{figure}
+
+\answer{b. 可以看到能量和动量都是守恒的，且动量基本为0（$10^{-14}$数量级））
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/b1.png}
+  \caption{能量和动量随时间变化}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/b2.png}
+  \caption{温度和压强随时间变化}
+\end{figure}
+
+\answer{c. 可以看到接近平衡态时，左边粒子数均值会趋近于总粒子数的一半$N/2=9$）
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/c1.png}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/c2.png}
+\end{figure}
+
+\answer{d. 可以看到能量和动量都是守恒的，且动量基本为0（$10^{-14}$数量级）；同时计算得到的压强与理想气体压强差值相对误差较小。）
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/d1.png}
+  \caption{能量和动量随时间变化}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/d2.png}
+  \caption{温度和压强随时间变化}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/d3.png}
+  \caption{压强计算值与理想气体公式计算得到压强差值}
+\end{figure}
+
+\answer{e. 可以看到能量和动量都是守恒的，且动量基本为0（$10^{-14}$数量级）；同时计算得到的压强与理想气体压强差值相对误差较小。）
+}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/e1.png}
+  \caption{能量和动量随时间变化}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/e2.png}
+  \caption{温度和压强随时间变化}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\columnwidth]{1/e3.png}
+  \caption{压强计算值与理想气体公式计算得到压强差值}
+\end{figure}
+
+\answer{abde题代码如下，对于不同的初始条件只需要更改代码中的初始条件设置即可。c题代码见本代码的后一部分}
+\lstinputlisting[style = python]{1/mdmodal.py}
+\answer{c题代码如下}
+\lstinputlisting[style = python]{1/c.py}
+\end{question}
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 2
+%----------------------------------------------------------------------------------------
+\begin{question}
+  \questiontext{Ising Model}
+  \answer{a. 可以看到$T_c$随着材料扩大，逐渐逼近无限大系统的相变温度，大约在2.35附近}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{2.png}
+    \caption{L=2}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{3.png}
+    \caption{L=3}
+  \end{figure}
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{4.png}
+    \caption{L=4}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_L5.png}
+    \caption{L=5}
+  \end{figure}
+  \lstinputlisting[style=python]{2/a.py}
+  \answer{b. 可以看到$T_c$随着材料扩大逼近大约2.25附近的过程，其中L=128的图片由于材料较大，在有限计算资源下难以达到接近平衡态的状态，进而出现多个峰值，可以估计出真实峰值应该接近2.25。
+  
+  蒙特卡洛模拟参数：10000步MC来达到平衡态，之后5000步进行测量。由于L=64、L=128的材料尺寸很大，在这个MC模拟参数下运算一次需要很长时间，且计算资源有限，因此没有设置更大的模拟参数，如果计算资源足够可以设置更大参数，得到更准确结果。}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L4.png}
+    \caption{L=4}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L6.png}
+    \caption{L=6}
+  \end{figure}
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L8.png}
+    \caption{L=8}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L16.png}
+    \caption{L=16}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L32.png}
+    \caption{L=32}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L64.png}
+    \caption{L=64}
+  \end{figure}
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{ising_model_L128.png}
+    \caption{L=128}
+  \end{figure}
+\end{question}
+\lstinputlisting[style=python]{2/b.py}
+
+\end{document}

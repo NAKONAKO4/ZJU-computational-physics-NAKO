@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.1)  23 DEC 2024 16:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.1)  23 DEC 2024 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex"
-(/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex
+**"/Users/nako/workspace/Computational physics/Homework#5/HW5_doc.tex"
+(/Users/nako/workspace/Computational physics/Homework#5/HW5_doc.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -1075,9 +1075,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box85
 \@float@everytoks=\toks47
 \@floatcapt=\box86
-)
-No file HW4_doc.aux.
-\openout1 = `HW4_doc.aux'.
+) (./HW5_doc.aux)
+\openout1 = `HW5_doc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
@@ -1096,6 +1095,7 @@ LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 \c@lstlisting=\count356
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1208,109 +1208,123 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 99.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 10.95pt on input line 101.
-
-
-LaTeX Warning: File `1/a1.png' not found on input line 106.
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:106: Unable to load picture or PDF file '1/a1.png'.
-<to be read again> 
-                   }
-l.106 ...graphics[width=0.7\columnwidth]{1/a1.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:106: Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...graphics[width=0.7\columnwidth]{1/a1.png}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 File: 1/a1.png Graphic file (type bmp)
 <1/a1.png>
-
-LaTeX Warning: File `1/a2.png' not found on input line 111.
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:111: Unable to load picture or PDF file '1/a2.png'.
-<to be read again> 
-                   }
-l.111 ...graphics[width=0.7\columnwidth]{1/a2.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:111: Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 ...graphics[width=0.7\columnwidth]{1/a2.png}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 File: 1/a2.png Graphic file (type bmp)
 <1/a2.png>
-
-LaTeX Warning: File `1/a3.png' not found on input line 117.
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:117: Unable to load picture or PDF file '1/a3.png'.
-<to be read again> 
-                   }
-l.117 ...graphics[width=0.7\columnwidth]{1/a3.png}
-                                                  
-The requested image couldn't be read because
-it was not a recognized image format.
-
-
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:117: Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...graphics[width=0.7\columnwidth]{1/a3.png}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 File: 1/a3.png Graphic file (type bmp)
 <1/a3.png>
-(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 120.
+ [2]
+File: 1/b1.png Graphic file (type bmp)
+<1/b1.png>
+File: 1/b2.png Graphic file (type bmp)
+<1/b2.png>
+ [3]
+File: 1/c1.png Graphic file (type bmp)
+<1/c1.png>
+File: 1/c2.png Graphic file (type bmp)
+<1/c2.png>
+File: 1/d1.png Graphic file (type bmp)
+<1/d1.png>
+File: 1/d2.png Graphic file (type bmp)
+<1/d2.png>
+ [4]
+File: 1/d3.png Graphic file (type bmp)
+<1/d3.png>
+ [5]
+File: 1/e1.png Graphic file (type bmp)
+<1/e1.png>
+File: 1/e2.png Graphic file (type bmp)
+<1/e2.png>
+ [6]
+File: 1/e3.png Graphic file (type bmp)
+<1/e3.png>
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 184.
 
-! Package Listings Error: File `1/mdmodal(.py)' not found.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: py)
+Package fontspec Warning: Font "STFangsong" does not contain requested Script
+(fontspec)                "CJK".
 
-Enter file name: 
-/Users/nako/workspace/Computational physics/Homework#4/HW4_doc.tex:121: Emergency stop.
-<read *> 
-         
-l.121 ...nputlisting[style = python]{1/mdmodal.py}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
 
- 
+Package fontspec Info: Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+(./1/mdmodal.py
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
+ [7] [8] [9] [10] [11]) (./1/c.py [12] [13] [14]) [15]
+File: 2.png Graphic file (type bmp)
+<2.png>
+File: 3.png Graphic file (type bmp)
+<3.png>
+File: 4.png Graphic file (type bmp)
+<4.png>
+File: ising_L5.png Graphic file (type bmp)
+<ising_L5.png>
+ [16] (./2/a.py [17]
+
+LaTeX Font Warning: Font shape `TU/STFangsong(0)/m/sc' undefined
+(Font)              using `TU/STFangsong(0)/m/n' instead on input line 56.
+
+[18])
+File: ising_model_L4.png Graphic file (type bmp)
+<ising_model_L4.png>
+File: ising_model_L6.png Graphic file (type bmp)
+<ising_model_L6.png>
+ [19]
+File: ising_model_L8.png Graphic file (type bmp)
+<ising_model_L8.png>
+File: ising_model_L16.png Graphic file (type bmp)
+<ising_model_L16.png>
+ [20]
+File: ising_model_L32.png Graphic file (type bmp)
+<ising_model_L32.png>
+File: ising_model_L64.png Graphic file (type bmp)
+<ising_model_L64.png>
+ [21]
+File: ising_model_L128.png Graphic file (type bmp)
+<ising_model_L128.png>
+ [22] (./2/b.py [23] [24]) [25] 
+enddocument/afterlastpage: lastpage setting LastPage.
+(./HW5_doc.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 28746 strings out of 476683
- 687588 string characters out of 5804048
- 1848018 words of memory out of 5000000
- 48414 multiletter control sequences out of 15000+600000
- 521965 words of font info for 113 fonts, out of 8000000 for 9000
+ 29170 strings out of 476683
+ 694339 string characters out of 5804048
+ 2086018 words of memory out of 5000000
+ 48804 multiletter control sequences out of 15000+600000
+ 522220 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 95i,6n,117p,581b,966s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on HW4_doc.xdv (1 page, 13364 bytes).
+ 95i,13n,117p,581b,2256s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on HW5_doc.xdv (25 pages, 326732 bytes).
